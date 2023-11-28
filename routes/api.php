@@ -17,13 +17,13 @@ use App\Http\Controllers\ProfileController;
 |
 */
 
-Route::post('login', [\App\Http\Controllers\API\AuthController::class, 'signin']);
-Route::post('register', [\App\Http\Controllers\API\AuthController::class, 'signup']);
+Route::post('/login', [\App\Http\Controllers\API\AuthController::class, 'signin']);
+Route::post('/register', [\App\Http\Controllers\API\AuthController::class, 'signup']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('say', function () {
+Route::get('/say', function () {
     event(new App\Events\StatusLiked('Someone'));
     return "Event has been sent!";
 });

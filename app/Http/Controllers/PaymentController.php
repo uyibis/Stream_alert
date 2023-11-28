@@ -77,8 +77,4 @@ class PaymentController extends Controller
         $status->getOrderId(); // Get order id
         $status->getTransactionId(); // Get transaction id
     }
-
-
-
-
 }
